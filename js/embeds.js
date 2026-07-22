@@ -12,15 +12,6 @@
   // Für Spotify: track/album/artist id; für YouTube: video id; für soundcloud: track-url
   var TRACKS = [
     {
-      title: "Heather Blue",
-      project: "Soloprojekt — Spotify",
-      source: "spotify",
-      sourceLabel: "Spotify",
-      spotify: "artist/2u0TAeHx3y5hhXMHNlvsxw",
-      youtube: null,
-      soundcloud: null
-    },
-    {
       title: "Chameleon",
       project: "Heather Blue",
       source: "youtube",
@@ -32,11 +23,20 @@
     {
       title: "Safe by Myself",
       project: "Heather Blue",
-      source: "youtube",
-      sourceLabel: "YouTube",
-      youtube: "rXUqr9lPRoQ",
-      spotify: null,
+      source: "spotify",
+      sourceLabel: "Spotify",
+      spotify: "track/0RcR4XxcqhiEmFDFLtXE9C",
+      youtube: null,
       soundcloud: null
+    },
+    {
+      title: "Safe by Myself",
+      project: "Heather Blue — SoundCloud",
+      source: "soundcloud",
+      sourceLabel: "SoundCloud",
+      soundcloud: "https://soundcloud.com/heatherblue-music/safe-by-myself",
+      spotify: null,
+      youtube: null
     }
   ];
 
@@ -44,7 +44,7 @@
     var url = "";
     if (track.source === "spotify") {
       url = "https://open.spotify.com/embed/" + track.spotify + "?utm_source=generator&theme=0";
-      return '<iframe src="' + url + '" width="100%" height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+      return '<iframe src="' + url + '" width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
     }
     if (track.source === "youtube") {
       // 2-Click-Lösung: User klickt bevor Verbindung aufgebaut wird → DSGVO ok.
