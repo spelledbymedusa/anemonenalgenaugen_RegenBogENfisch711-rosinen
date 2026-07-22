@@ -53,8 +53,8 @@
       return '<iframe src="' + url + '" width="100%" height="200" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
     }
     if (track.source === "soundcloud") {
-      url = "https://w.soundcloud.com/player/?url=" + encodeURIComponent(track.soundcloud) + "&color=%236b8cae&auto_play=false&visual=false";
-      return '<iframe src="' + url + '" width="100%" height="166" allow="autoplay" loading="lazy"></iframe>';
+      url = "https://w.soundcloud.com/player/?url=" + encodeURIComponent(track.soundcloud) + "&color=%236b8cae&auto_play=false&visual=true&show_artwork=true";
+      return '<iframe src="' + url + '" width="100%" height="300" allow="autoplay" loading="lazy"></iframe>';
     }
     return "";
   }
