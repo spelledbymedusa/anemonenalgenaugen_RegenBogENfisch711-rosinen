@@ -518,6 +518,8 @@ body.menu-open { overflow: auto; }
 }
 .pub__cite a { color: var(--heather-blue-deep); border-bottom: 1px solid var(--rose); }
 .pub__cite a:hover { color: var(--rose); }
+.pub__authors { color: var(--heather-blue-deep); font-weight: 400; }
+.pub__title { font-weight: 600; color: var(--ink); }
 
 /* ---------- Legal pages (Rechtliches) ---------- */
 .legal {
