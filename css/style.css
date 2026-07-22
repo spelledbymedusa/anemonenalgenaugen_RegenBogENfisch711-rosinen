@@ -127,46 +127,28 @@ small { color: var(--ink-soft); }
   color: var(--brown);
 }
 
-/* Hamburger */
-.nav-toggle {
-  background: none; border: 0; cursor: pointer;
-  width: 44px; height: 44px; padding: 0;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  gap: 5px; border-radius: var(--radius-sm);
-}
-.nav-toggle span {
-  display: block; width: 24px; height: 2px; background: var(--heather-blue-deep);
-  transition: transform .3s var(--ease), opacity .3s var(--ease);
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* Nav: always visible inline (no hamburger) */
+.nav-toggle { display: none; }
 
 .menu {
-  position: fixed; top: 72px; right: 0;
-  width: min(320px, 86vw);
-  height: calc(100vh - 72px);
-  background: var(--cream);
-  border-left: 1px solid var(--line);
-  box-shadow: -20px 0 60px -30px rgba(61,90,122,.3);
-  transform: translateX(100%);
-  transition: transform .4s var(--ease);
-  padding: 1.5rem var(--gutter) 2rem;
-  overflow-y: auto;
-  list-style: none; margin: 0;
+  display: flex;
+  gap: clamp(.8rem, 2vw, 1.8rem);
+  list-style: none; margin: 0; padding: 0;
+  align-items: center;
 }
-.menu.is-open { transform: translateX(0); }
-.menu li { border-bottom: 1px solid var(--line); }
+.menu li { border: 0; }
 .menu a {
-  display: block; padding: .9rem 0;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  display: block; padding: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(.78rem, 1.8vw, .9rem);
   color: var(--heather-blue-deep);
+  letter-spacing: .02em;
+  white-space: nowrap;
 }
-.menu a:hover { color: var(--rose); padding-left: .4rem; }
-.menu .menu-impressum { font-size: .9rem; font-family: var(--font-sans); color: var(--ink-soft); }
+.menu a:hover { color: var(--rose); padding-left: 0; }
+.menu .menu-impressum { font-size: clamp(.7rem, 1.5vw, .8rem); font-family: var(--font-sans); color: var(--ink-soft); }
 
-body.menu-open { overflow: hidden; }
+body.menu-open { overflow: auto; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -524,42 +506,18 @@ body.menu-open { overflow: hidden; }
 .pub-list { list-style: none; padding: 0; }
 .pub {
   padding: 1.4rem 0; border-bottom: 1px solid var(--line);
-  display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start;
 }
 .pub:first-child { border-top: 1px solid var(--line); }
-.pub__main { min-width: 0; }
-.pub__title {
+.pub--plain { display: block; }
+.pub__cite {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--ink);
-  margin-bottom: .3em;
+  margin: 0;
 }
-.pub__authors {
-  font-family: var(--font-sans);
-  font-size: .9rem;
-  font-weight: 500;
-  color: var(--heather-blue-deep);
-  margin-bottom: .2em;
-}
-.pub__venue {
-  font-family: var(--font-sans);
-  font-size: .82rem;
-  color: var(--ink-soft);
-  line-height: 1.5;
-}
-.pub__venue a { color: var(--heather-blue-deep); border-bottom: 1px solid var(--rose); }
-.pub__venue a:hover { color: var(--rose); }
-.pub__badge {
-  font-size: .7rem; text-transform: uppercase; letter-spacing: .15em;
-  padding: .3em .7em; border-radius: 999px; white-space: nowrap;
-  background: var(--rose-soft); color: var(--brown);
-}
-@media (max-width: 600px) {
-  .pub { grid-template-columns: 1fr; }
-  .pub__badge { justify-self: start; }
-}
+.pub__cite a { color: var(--heather-blue-deep); border-bottom: 1px solid var(--rose); }
+.pub__cite a:hover { color: var(--rose); }
 
 /* ---------- Legal pages (Rechtliches) ---------- */
 .legal {
@@ -762,38 +720,20 @@ body.menu-open { overflow: hidden; }
   opacity: .8;
 }
 
-/* Core Impressum block in footer (§5 DDG Pflichtangaben only).
-   Haftung/Urheberrecht/Datenschutz live on dedicated pages. */
+/* Footer imprint — just a link to rechtliches.html (address hidden behind click) */
 .footer__imprint {
   padding-top: 2rem;
   border-top: 1px solid rgba(255,255,255,.08);
   margin-top: 2rem;
+  text-align: center;
 }
-.footer__imprint h4 {
-  color: var(--white);
-  font-family: var(--font-sans);
-  font-size: .75rem;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  margin: 0 0 .9rem;
-  font-weight: 600;
-}
-.footer__imprint p {
-  font-size: .9rem;
+.footer__imprint-link {
+  font-size: .8rem;
   color: var(--heather-blue-soft);
-  line-height: 1.65;
-  margin: 0 0 .4em;
+  letter-spacing: .05em;
+  transition: color .25s var(--ease);
 }
-.footer__imprint p:last-child { margin-bottom: 0; }
-.footer__imprint a { color: var(--heather-blue-soft); border-bottom: 1px solid rgba(174,191,212,.25); }
-.footer__imprint a:hover { color: var(--rose-soft); border-color: var(--rose-soft); }
-.footer__imprint-small { font-size: .78rem !important; opacity: .82; }
-.footer__imprint-links {
-  margin-top: 1rem !important;
-  font-size: .8rem !important;
-  display: flex; gap: 1.2rem; flex-wrap: wrap;
-}
-.footer__imprint-links a { border: 0; }
+.footer__imprint-link:hover { color: var(--rose-soft); }
 @media (max-width: 700px) {
   .footer__bottom { flex-direction: column; align-items: center; text-align: center; }
 }
@@ -834,8 +774,8 @@ body { animation: pageFade .5s var(--ease) both; }
 /* ---------- Active Nav State ---------- */
 .menu a.is-active { color: var(--rose); }
 .menu a.is-active::after {
-  content: ""; display: block; width: 24px; height: 1px;
-  background: var(--rose); margin-top: .3rem;
+  content: ""; display: block; width: 100%; height: 1px;
+  background: var(--rose); margin-top: .15rem;
 }
 
 /* ---------- Landing Page Preview Cards ---------- */
