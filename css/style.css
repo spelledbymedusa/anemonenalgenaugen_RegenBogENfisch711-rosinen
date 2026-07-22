@@ -106,6 +106,14 @@ small { color: var(--ink-soft); }
   border-bottom: 1px solid transparent;
   transition: border-color .3s var(--ease), background .3s var(--ease);
 }
+.site-header::after {
+  content: "";
+  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--rose) 0%, var(--heather-blue-soft) 50%, var(--brown-soft) 100%);
+  opacity: .4;
+  transition: opacity .3s var(--ease);
+}
+.site-header.is-scrolled::after { opacity: .6; }
 .site-header.is-scrolled { border-color: var(--line); }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
