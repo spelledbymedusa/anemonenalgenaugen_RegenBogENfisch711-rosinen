@@ -701,19 +701,6 @@ body.menu-open { overflow: auto; }
 }
 .footer__socials svg { width: 16px; height: 16px; }
 
-.footer__nav {
-  display: flex; gap: 1.5rem; flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-.footer__nav a {
-  font-size: .85rem;
-  color: var(--heather-blue-soft);
-  transition: color .25s var(--ease);
-}
-.footer__nav a:hover { color: var(--rose-soft); }
-.footer__nav .footer__nav-small { font-size: .75rem; opacity: .7; }
-
 .footer__bottom {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
   padding-top: 1.5rem; font-size: .8rem; color: var(--heather-blue-soft);
