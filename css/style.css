@@ -100,21 +100,14 @@ small { color: var(--ink-soft); }
 /* ---------- Header / Navigation ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(250, 247, 242, 0.92);
+  background: linear-gradient(180deg, rgba(230,236,243,0.88) 0%, rgba(250,247,242,0.92) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: border-color .3s var(--ease), background .3s var(--ease);
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--rose) 0%, var(--heather-blue-soft) 50%, var(--brown-soft) 100%) 1;
+  transition: background .3s var(--ease);
 }
-.site-header::after {
-  content: "";
-  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--rose) 0%, var(--heather-blue-soft) 50%, var(--brown-soft) 100%);
-  opacity: .4;
-  transition: opacity .3s var(--ease);
-}
-.site-header.is-scrolled::after { opacity: .6; }
-.site-header.is-scrolled { border-color: var(--line); }
+.site-header.is-scrolled { background: linear-gradient(180deg, rgba(230,236,243,0.95) 0%, rgba(250,247,242,0.97) 100%); }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
   height: 72px;
