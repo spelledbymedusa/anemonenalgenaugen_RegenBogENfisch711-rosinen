@@ -628,7 +628,7 @@ body.menu-open { overflow: hidden; }
   background: linear-gradient(180deg, var(--heather-blue-deep) 0%, #34506e 100%);
   color: var(--cream);
   padding: clamp(3rem, 7vw, 5rem) 0 2rem;
-  margin-top: 4rem;
+  margin-top: 0;
   position: relative;
 }
 .site-footer::before {
