@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Musik — Franziska Heidemann</title>
   <meta name="description" content="Musik von Franziska Heidemann — Klassik, Heather Blue (Solo), Vox Animata. Spotify, YouTube und SoundCloud (2-Click).">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress"></div>
 
   <header class="site-header">
     <div class="wrap nav">
@@ -21,7 +21,6 @@
       <ul class="menu" id="menu">
         <li><a href="ueber-mich.html">Über mich</a></li>
         <li><a href="musik.html">Musik</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
         <li><a href="termine.html">Termine</a></li>
         <li><a href="publikationen.html">Publikationen</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
@@ -41,6 +40,21 @@
   <section class="section--tight">
     <div class="wrap" style="max-width:760px">
       <ul class="tracklist" data-tracklist></ul>
+
+      <div class="musik__platforms reveal">
+        <a href="https://open.spotify.com/artist/2u0TAeHx3y5hhXMHNlvsxw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.22c3.8-.87 7.08-.5 9.72 1.11.3.18.39.57.21.86zm1.23-2.74a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.98-1.17a.78.78 0 1 1-.45-1.49c3.63-1.1 8.16-.56 11.25 1.33.37.22.49.7.25 1.07zm.11-2.85C14.82 8.95 9.4 8.77 6.3 9.7a.94.94 0 1 1-.54-1.8c3.56-1.08 9.53-.87 13.29 1.34a.94.94 0 0 1-.96 1.61z"/></svg>
+          Spotify
+        </a>
+        <a href="https://www.youtube.com/channel/UCQxTqDCscMDkjQmPfyg3vqA" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5c-.3-1-1-1.8-2-2.1C19.1 5 12 5 12 5s-7.1 0-9 .4c-1 .3-1.8 1.1-2 2.1C.6 9.4.6 12 .6 12s0 2.6.4 4.5c.3 1 1 1.8 2 2.1 1.9.4 9 .4 9 .4s7.1 0 9-.4c1-.3 1.8-1.1 2-2.1.4-1.9.4-4.5.4-4.5s0-2.6-.4-4.5zM9.8 15.5v-7l6 3.5-6 3.5z"/></svg>
+          YouTube
+        </a>
+        <a href="https://soundcloud.com/heatherblue-music" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 17h1.5v-6H1zm3 0h1.5v-8H4zm3 0h1.5v-9H7zm3 0h1.5v-10H10zm3 0h1.5v-10H13zm3 0H17v-9.7c-.3-.1-.6-.2-1-.3zm2.5 0H20v-9c-.4-.2-.8-.4-1.2-.5zm2.5 0H22v-7.5c-.3-.4-.7-.7-1.2-1zM16 6.5c-2.5 0-4.5 2-4.5 4.5v6h9v-6c0-2.5-2-4.5-4.5-4.5z"/></svg>
+          SoundCloud
+        </a>
+      </div>
     </div>
   </section>
 
@@ -60,7 +74,6 @@
           <ul>
             <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="musik.html">Musik</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
             <li><a href="termine.html">Termine</a></li>
             <li><a href="publikationen.html">Publikationen</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>

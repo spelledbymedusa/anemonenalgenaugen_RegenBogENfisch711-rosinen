@@ -1,6 +1,10 @@
 # Dev working files — not part of the live site
 .docs/
 
+# Original uncompressed photos (keep optimized versions only)
+assets/img/franziska_161.jpg
+assets/img/franziska_293.jpg
+
 # OS files
 .DS_Store
 Thumbs.db

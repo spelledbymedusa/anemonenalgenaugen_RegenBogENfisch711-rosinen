@@ -54,6 +54,45 @@
     return end < today();
   }
 
+  // YYYYMMDD für Google Calendar
+  function fmtGCal(d) {
+    var y = d.getFullYear().toString();
+    var m = (d.getMonth() + 1).toString().padStart(2, "0");
+    var day = d.getDate().toString().padStart(2, "0");
+    return y + m + day;
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function gcalLink(ev) {
+    var s = parseDate(ev.start);
+    // Google Calendar ist exklusiv beim Enddatum → +1 Tag
+    var endSrc = ev.end ? parseDate(ev.end) : parseDate(ev.start);
+    var e = new Date(endSrc);
+    e.setDate(e.getDate() + 1);
+
+    var params = [
+      "action=TEMPLATE",
+      "text=" + encodeURIComponent(ev.title),
+      "dates=" + fmtGCal(s) + "/" + fmtGCal(e),
+      "details=" + encodeURIComponent(ev.desc),
+      "location=" + encodeURIComponent(ev.location)
+    ].join("&");
+
+    return "https://www.google.com/calendar/render?" + params;
+  }
+
+  function gmapsLink(location) {
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(location);
+  }
+
   function renderEvent(ev) {
     var s = parseDate(ev.start);
     var e = ev.end ? parseDate(ev.end) : null;
@@ -80,15 +119,30 @@
       ? fmtFull(s) + " – " + fmtFull(e)
       : fmtFull(s);
 
+    var calIcon =
+      '<svg class="event__cal-icon" width="14" height="14" viewBox="0 0 24 24" ' +
+      'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+      'stroke-linejoin="round" aria-hidden="true">' +
+        '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>' +
+        '<line x1="16" y1="2" x2="16" y2="6"></line>' +
+        '<line x1="8" y1="2" x2="8" y2="6"></line>' +
+        '<line x1="3" y1="10" x2="21" y2="10"></line>' +
+      '</svg>';
+
     return '<article class="event' + (past ? " is-past" : "") + '">' +
       dateBlock +
       '<div class="event__body">' +
-        '<h3>' + ev.title + '</h3>' +
+        '<h3>' + escapeHtml(ev.title) + '</h3>' +
         '<div class="event__meta">' +
           '<span>' + dateText + '</span>' +
-          '<span>' + ev.location + '</span>' +
+          '<a href="' + gmapsLink(ev.location) + '" target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(ev.location) +
+          '</a>' +
         '</div>' +
-        '<p class="muted">' + ev.desc + '</p>' +
+        '<p class="muted">' + escapeHtml(ev.desc) + '</p>' +
+        '<a class="event__cal-link" href="' + gcalLink(ev) + '" target="_blank" rel="noopener noreferrer">' +
+          calIcon + ' Zum Kalender hinzufügen' +
+        '</a>' +
       '</div>' +
     '</article>';
   }

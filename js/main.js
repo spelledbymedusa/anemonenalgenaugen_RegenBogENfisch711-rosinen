@@ -47,16 +47,29 @@
     });
   }
 
-  // ---- Header-Scroll-Effekt ----
+  // ---- Header-Scroll-Effekt + Scroll Progress ----
   var header = document.querySelector(".site-header");
+  var progress = document.getElementById("scroll-progress");
   if (header) {
     var onScroll = function () {
       if (window.scrollY > 8) header.classList.add("is-scrolled");
       else header.classList.remove("is-scrolled");
+      if (progress) {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
+      }
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+
+  // ---- Active Nav State ----
+  var path = location.pathname.split("/").pop() || "index.html";
+  var navLinks = document.querySelectorAll(".menu a");
+  navLinks.forEach(function (a) {
+    var href = a.getAttribute("href");
+    if (href === path) a.classList.add("is-active");
+  });
 
   // ---- Reveal-on-Scroll ----
   var reveals = document.querySelectorAll(".reveal");

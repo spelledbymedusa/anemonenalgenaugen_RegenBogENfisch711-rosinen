@@ -10,10 +10,12 @@
   // Track-Daten: Quelle als Typ, ID/URL je nach Dienst
   // type: "spotify" | "youtube" | "soundcloud"
   // Für Spotify: track/album/artist id; für YouTube: video id; für soundcloud: track-url
+  // group: section heading for grouping tracks by project
   var TRACKS = [
     {
       title: "Chameleon",
       project: "Heather Blue",
+      group: "Heather Blue (Solo)",
       source: "youtube",
       sourceLabel: "YouTube",
       youtube: "tcri-PwhqcQ",
@@ -23,6 +25,7 @@
     {
       title: "Safe by Myself",
       project: "Heather Blue",
+      group: "Heather Blue (Solo)",
       source: "spotify",
       sourceLabel: "Spotify",
       spotify: "track/0RcR4XxcqhiEmFDFLtXE9C",
@@ -32,6 +35,7 @@
     {
       title: "Safe by Myself",
       project: "Heather Blue — SoundCloud",
+      group: "Heather Blue (Solo)",
       source: "soundcloud",
       sourceLabel: "SoundCloud",
       soundcloud: "https://soundcloud.com/heatherblue-music/safe-by-myself",
@@ -63,7 +67,17 @@
     var list = document.querySelector("[data-tracklist]");
     if (!list) return;
 
+    var currentGroup = "";
     TRACKS.forEach(function (track, i) {
+      // Group header
+      if (track.group && track.group !== currentGroup) {
+        currentGroup = track.group;
+        var groupLi = document.createElement("li");
+        groupLi.className = "track__group";
+        groupLi.innerHTML = '<div class="track__group-title">' + currentGroup + '</div>';
+        list.appendChild(groupLi);
+      }
+
       var li = document.createElement("li");
       li.className = "track";
       li.innerHTML =
