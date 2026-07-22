@@ -116,7 +116,7 @@
     if (pastWrap) {
       if (past.length === 0) {
         if (pastDivider) pastDivider.style.display = "none";
-        pastWrap.innerHTML = '<p class="muted center" style="padding:1rem 0">Vergangene Termine folgen in Kürze.</p>';
+        pastWrap.innerHTML = "";
       } else {
         pastWrap.innerHTML = past.map(renderEvent).join("");
       }
