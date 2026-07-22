@@ -578,23 +578,25 @@ body.menu-open { overflow: hidden; }
   outline: 0; border-color: var(--rose); box-shadow: 0 0 0 3px var(--rose-soft);
 }
 .field textarea { min-height: 140px; resize: vertical; }
+.form { position: relative; }
 .form__hint { font-size: .75rem; color: var(--ink-soft); margin: 0; }
 .form__actions {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: .5rem;
+  position: relative;
+  min-height: 3.5rem;
 }
-.form__actions .btn { margin-bottom: 1.5rem; }
+.form__actions .btn { margin-bottom: 1.8rem; }
 .form__actions .form__hint {
   position: absolute;
   left: 0;
   bottom: 0;
   text-align: left;
 }
-.form { position: relative; }
 @media (max-width: 600px) {
-  .form__actions { flex-direction: column; align-items: center; gap: .6rem; }
+  .form__actions { flex-direction: column; align-items: center; gap: .6rem; min-height: auto; }
   .form__actions .form__hint { position: static; text-align: center; }
   .form__actions .btn { margin-bottom: 0; }
 }
