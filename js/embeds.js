@@ -19,6 +19,7 @@
       source: "youtube",
       sourceLabel: "YouTube",
       youtube: "tcri-PwhqcQ",
+      cover: "assets/img/covers/chameleon-youtube-maxresdefault.jpg",
       spotify: null,
       soundcloud: null
     },
@@ -29,6 +30,7 @@
       source: "spotify",
       sourceLabel: "Spotify",
       spotify: "track/0RcR4XxcqhiEmFDFLtXE9C",
+      cover: "assets/img/covers/safe-by-myself-spotify.jpg",
       youtube: null,
       soundcloud: null
     },
@@ -39,6 +41,7 @@
       source: "soundcloud",
       sourceLabel: "SoundCloud",
       soundcloud: "https://soundcloud.com/heatherblue-music/safe-by-myself",
+      cover: "assets/img/covers/safe-by-myself-soundcloud.jpg",
       spotify: null,
       youtube: null
     }
@@ -82,6 +85,9 @@
       li.className = "track";
       li.innerHTML =
         '<div class="track__row">' +
+          (track.cover
+            ? '<img class="track__cover" src="' + track.cover + '" alt="' + track.title + '" loading="lazy">'
+            : '<div class="track__cover track__cover--placeholder"></div>') +
           '<button class="track__play" aria-label="' + track.title + ' abspielen" data-track="' + i + '">' +
             '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>' +
           '</button>' +

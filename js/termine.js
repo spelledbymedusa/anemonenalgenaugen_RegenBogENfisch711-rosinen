@@ -30,6 +30,9 @@
     // Past dates folgen — Platzhalter
   ];
 
+  // Expose for next-event teaser on landing page
+  window.TERMINE_EVENTS = EVENTS;
+
   var PAST_EVENTS = [
     // { start: "2025-06-01", end: null, title: "...", desc: "...", location: "...", tags: [] }
   ];
