@@ -766,7 +766,7 @@ body.menu-open { overflow: auto; }
 }
 
 .footer__bottom {
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;
   padding-top: 1.5rem; font-size: .8rem; color: var(--heather-blue-soft);
   opacity: .8;
 }
