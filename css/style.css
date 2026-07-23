@@ -838,6 +838,10 @@ body.menu-open { overflow: auto; }
   html { scroll-behavior: auto; }
 }
 
+@media (max-width: 820px) {
+  .reveal { opacity: 1; transform: none; }
+}
+
 /* ---------- Page Transition (fade-in on load) ---------- */
 body { animation: pageFade .5s var(--ease) both; }
 @keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
