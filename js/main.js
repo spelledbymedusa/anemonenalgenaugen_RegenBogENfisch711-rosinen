@@ -32,9 +32,12 @@
     if (brand) brand.classList.add("is-active");
   }
 
-  // ---- Reveal-on-Scroll ----
+  // ---- Reveal-on-Scroll (desktop only — mobile shows everything immediately) ----
   var reveals = document.querySelectorAll(".reveal");
-  if (reveals.length && "IntersectionObserver" in window) {
+  var isMobile = window.matchMedia("(max-width: 820px)").matches;
+  if (isMobile) {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  } else if (reveals.length && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
