@@ -126,13 +126,13 @@ small { color: var(--ink-soft); }
 
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  height: auto; min-height: 64px;
-  padding-top: .5rem; padding-bottom: .5rem;
+  height: auto; min-height: 72px;
+  padding-top: .6rem; padding-bottom: .6rem;
   flex-wrap: wrap; gap: .5rem;
 }
 .brand {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-size: clamp(1.05rem, 3vw, 1.4rem);
   color: var(--heather-blue-deep);
   letter-spacing: .04em;
   display: flex; align-items: baseline; gap: .4em;
@@ -148,21 +148,25 @@ small { color: var(--ink-soft); }
 
 .menu {
   display: flex;
-  gap: clamp(.6rem, 1.5vw, 1.5rem);
+  gap: clamp(.8rem, 2.2vw, 2.2rem);
   list-style: none; margin: 0; padding: 0;
   align-items: center;
   flex-wrap: wrap;
 }
 .menu li { border: 0; }
 .menu a {
-  display: block; padding: 0;
+  display: block; padding: .2em 0;
   font-family: var(--font-sans);
-  font-size: clamp(.72rem, 1.6vw, .88rem);
+  font-size: clamp(.82rem, 2vw, 1rem);
+  font-weight: 400;
   color: var(--heather-blue-deep);
-  letter-spacing: .02em;
+  letter-spacing: .06em;
   white-space: nowrap;
+  position: relative;
+  transition: color .3s var(--ease);
 }
-.menu a:hover { color: var(--rose); padding-left: 0; }
+.menu a:hover { color: var(--rose); }
+.menu a.is-active { color: var(--rose); font-weight: 500; }
 .menu .menu-impressum { font-size: clamp(.7rem, 1.5vw, .8rem); font-family: var(--font-sans); color: var(--ink-soft); }
 
 body.menu-open { overflow: auto; }
