@@ -129,7 +129,7 @@ small { color: var(--ink-soft); }
   display: flex; align-items: center; justify-content: space-between;
   height: auto; min-height: 72px;
   padding-top: .6rem; padding-bottom: .6rem;
-  flex-wrap: wrap; gap: .5rem;
+  flex-wrap: nowrap; gap: .5rem;
 }
 .brand {
   font-family: var(--font-serif);
@@ -138,6 +138,7 @@ small { color: var(--ink-soft); }
   letter-spacing: .04em;
   display: flex; align-items: baseline; gap: .4em;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .brand small {
   font-family: var(--font-sans);
@@ -152,7 +153,8 @@ small { color: var(--ink-soft); }
   gap: clamp(.8rem, 2.2vw, 2.2rem);
   list-style: none; margin: 0; padding: 0;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 .menu li { border: 0; }
 .menu a {
@@ -175,10 +177,10 @@ small { color: var(--ink-soft); }
 .brand.is-active { color: var(--rose); }
 
 @media (max-width: 600px) {
-  .nav { min-height: 56px; padding-top: .4rem; padding-bottom: .4rem; gap: .3rem; }
-  .brand { font-size: .9rem; }
-  .menu { gap: clamp(.4rem, 1.5vw, .7rem); }
-  .menu a { font-size: .68rem; letter-spacing: .03em; }
+  .nav { min-height: 50px; padding-top: .35rem; padding-bottom: .35rem; gap: .4rem; }
+  .brand { font-size: .78rem; letter-spacing: .02em; }
+  .menu { gap: .35rem; justify-content: flex-end; }
+  .menu a { font-size: .58rem; letter-spacing: .02em; }
 }
 
 body.menu-open { overflow: auto; }
