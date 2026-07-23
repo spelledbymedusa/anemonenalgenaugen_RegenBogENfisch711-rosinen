@@ -103,9 +103,10 @@
 
     var dateBlock = "";
     if (e) {
+      var monthRange = fmtMonth(s) === fmtMonth(e) ? fmtMonth(s) : fmtMonth(s) + ' – ' + fmtMonth(e);
       dateBlock =
         '<div class="event__date">' +
-          '<div class="month">' + fmtMonth(s) + ' – ' + fmtMonth(e) + '</div>' +
+          '<div class="month">' + monthRange + '</div>' +
           '<div class="day">' + fmtDay(s) + '–' + fmtDay(e) + '</div>' +
           '<div class="year">' + fmtYear(s) + '</div>' +
         '</div>';

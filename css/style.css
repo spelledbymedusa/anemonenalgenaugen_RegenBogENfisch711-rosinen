@@ -344,7 +344,7 @@ body.menu-open { overflow: auto; }
 }
 @media (max-width: 820px) {
   .about__grid { grid-template-columns: 1fr; }
-  .about__portrait { position: static; max-width: 360px; margin: 0 auto 1rem; }
+  .about__portrait { position: static; max-width: 220px; margin: 0 auto 1rem; }
 }
 
 /* ---------- Musik ---------- */
@@ -667,6 +667,13 @@ body.menu-open { overflow: auto; }
 .field textarea { min-height: 140px; resize: vertical; }
 .form { position: relative; }
 .form__hint { font-size: .75rem; color: var(--ink-soft); margin: 0; }
+.form__hint-top {
+  font-size: .72rem;
+  color: var(--ink-soft);
+  text-align: right;
+  margin-bottom: 1.2rem;
+  letter-spacing: .02em;
+}
 .form__actions {
   display: flex;
   justify-content: flex-end;
@@ -742,6 +749,16 @@ body.menu-open { overflow: auto; }
   display: flex; gap: .7rem; flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 1.8rem;
+}
+.footer__socials-cta {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--heather-blue-soft);
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: .8;
 }
 .footer__socials a {
   display: inline-flex; align-items: center; gap: .5em;
