@@ -15,7 +15,7 @@
     {
       title: "Chameleon",
       project: "Heather Blue",
-      group: "Heather Blue (Solo)",
+      group: "Hörproben",
       source: "youtube",
       sourceLabel: "YouTube",
       youtube: "tcri-PwhqcQ",
@@ -26,7 +26,7 @@
     {
       title: "Safe by Myself",
       project: "Heather Blue",
-      group: "Heather Blue (Solo)",
+      group: "Hörproben",
       source: "spotify",
       sourceLabel: "Spotify",
       spotify: "track/0RcR4XxcqhiEmFDFLtXE9C",
@@ -37,7 +37,7 @@
     {
       title: "Safe by Myself",
       project: "Heather Blue — SoundCloud",
-      group: "Heather Blue (Solo)",
+      group: "Hörproben",
       source: "soundcloud",
       sourceLabel: "SoundCloud",
       soundcloud: "https://soundcloud.com/heatherblue-music/safe-by-myself",
