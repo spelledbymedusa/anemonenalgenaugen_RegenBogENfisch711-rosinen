@@ -841,21 +841,6 @@ body { animation: pageFade .5s var(--ease) both; }
   margin: 2.5rem 0;
   line-height: 1.4;
 }
-.about__tags {
-  display: flex; flex-wrap: wrap; gap: .6rem;
-  margin: 2rem 0 2.5rem;
-}
-.about__tag {
-  font-family: var(--font-sans);
-  font-size: .75rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: .4em .9em;
-  border-radius: 999px;
-  background: var(--heather-blue-mist);
-  color: var(--heather-blue-deep);
-  font-weight: 500;
-}
 
 /* ---------- Termine: Calendar Link ---------- */
 .event__cal-link {
