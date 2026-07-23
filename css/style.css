@@ -224,7 +224,7 @@ body.menu-open { overflow: auto; }
   display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 4rem);
   align-items: center; width: 100%;
 }
-.hero__text h1 { margin-bottom: .3em; font-size: clamp(2rem, 5vw, 3.2rem); }
+.hero__text h1 { margin-bottom: .3em; font-size: clamp(1.5rem, 5vw, 3.2rem); white-space: nowrap; }
 .hero__subtitle {
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 2.2vw, 1.5rem);
