@@ -346,8 +346,14 @@ body.menu-open { overflow: auto; }
   line-height: 1;
 }
 @media (max-width: 820px) {
-  .about__grid { grid-template-columns: 1fr; }
-  .about__portrait { position: static; max-width: 140px; margin: 0 auto .8rem; }
+  .about__grid { display: block; }
+  .about__portrait {
+    position: static;
+    float: right;
+    width: 110px;
+    max-width: 110px;
+    margin: 0 0 .8rem 1rem;
+  }
   .about__portrait::before { inset: -4px; }
 }
 
