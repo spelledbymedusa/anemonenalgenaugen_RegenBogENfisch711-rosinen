@@ -720,6 +720,12 @@ body.menu-open { overflow: auto; }
 }
 .footer__socials svg { width: 16px; height: 16px; }
 
+@media (max-width: 600px) {
+  .footer__socials { gap: .5rem; flex-wrap: nowrap; justify-content: center; }
+  .footer__socials a { font-size: 0; padding: .6em; }
+  .footer__socials svg { width: 18px; height: 18px; }
+}
+
 .footer__bottom {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
   padding-top: 1.5rem; font-size: .8rem; color: var(--heather-blue-soft);
