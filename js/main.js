@@ -26,6 +26,11 @@
     var href = a.getAttribute("href");
     if (href === path) a.classList.add("is-active");
   });
+  // Brand link active on index
+  if (path === "index.html") {
+    var brand = document.querySelector(".brand");
+    if (brand) brand.classList.add("is-active");
+  }
 
   // ---- Reveal-on-Scroll ----
   var reveals = document.querySelectorAll(".reveal");
