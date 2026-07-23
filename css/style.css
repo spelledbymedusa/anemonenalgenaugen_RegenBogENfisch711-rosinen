@@ -350,11 +350,11 @@ body.menu-open { overflow: auto; }
   .about__portrait {
     position: static;
     float: right;
-    width: 110px;
-    max-width: 110px;
-    margin: 0 0 .8rem 1rem;
+    width: 150px;
+    max-width: 150px;
+    margin: 0 0 1rem 1.2rem;
   }
-  .about__portrait::before { inset: -4px; }
+  .about__portrait::before { inset: -5px; }
 }
 
 /* ---------- Musik ---------- */
