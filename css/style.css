@@ -785,10 +785,6 @@ body { animation: pageFade .5s var(--ease) both; }
 
 /* ---------- Active Nav State ---------- */
 .menu a.is-active { color: var(--rose); }
-.menu a.is-active::after {
-  content: ""; display: block; width: 100%; height: 1px;
-  background: var(--rose); margin-top: .15rem;
-}
 
 /* ---------- Landing Page Preview Cards ---------- */
 .preview { padding-top: clamp(3rem, 6vw, 5rem); }
