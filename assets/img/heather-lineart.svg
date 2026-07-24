@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" aria-hidden="true">
   <!-- Heather lineart — elegant botanical line drawing -->
-  <g stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.15">
+  <g stroke="#faf7f2" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
     <!-- Main stem -->
     <path d="M100,195 C100,170 98,140 102,110 C104,85 100,55 105,30"/>
     <!-- Side branch 1 (lower) -->
