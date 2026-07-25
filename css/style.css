@@ -858,9 +858,18 @@ body.menu-open { overflow: auto; }
 /* Footer imprint — just a link to rechtliches.html (address hidden behind click) */
 .footer__imprint {
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,.08);
   margin-top: 2rem;
   text-align: center;
+  position: relative;
+}
+.footer__imprint::before {
+  content: "";
+  display: block;
+  width: 40%;
+  max-width: 360px;
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: 0 auto 2rem;
 }
 .footer__imprint-link {
   font-size: .8rem;
