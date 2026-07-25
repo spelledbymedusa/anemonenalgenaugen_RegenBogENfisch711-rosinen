@@ -766,12 +766,12 @@ body.menu-open { overflow: auto; }
 .footer__heather--left {
   bottom: .5rem;
   left: .5rem;
-}
+  left: .5rem;
+  transform: scaleX(-1);
 .footer__heather--right {
   bottom: .5rem;
   right: .5rem;
   transform: scaleX(-1);
-}
 @media (max-width: 600px) {
   .footer__heather { width: 90px; opacity: .1; }
 }
