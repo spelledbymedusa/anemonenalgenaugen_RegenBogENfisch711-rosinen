@@ -785,6 +785,7 @@ body.menu-open { overflow: auto; }
 .footer__heather--right {
   bottom: .5rem;
   right: .5rem;
+  transform: scaleX(-1);
 }
 @media (max-width: 600px) {
   .footer__heather { width: 90px; height: 190px; opacity: .1; }
