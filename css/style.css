@@ -97,6 +97,19 @@ small { color: var(--ink-soft); }
 }
 .divider--center { margin-left: auto; margin-right: auto; }
 
+/* Melody contour line under page titles */
+.page-head__melody {
+  display: block;
+  width: 280px;
+  max-width: 80%;
+  height: auto;
+  margin: 1rem auto 0;
+  opacity: .85;
+}
+@media (max-width: 600px) {
+  .page-head__melody { width: 200px; }
+}
+
 /* ---------- Header / Navigation ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
