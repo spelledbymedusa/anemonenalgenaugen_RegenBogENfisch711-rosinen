@@ -100,14 +100,14 @@ small { color: var(--ink-soft); }
 /* Melody contour line under page titles */
 .page-head__melody {
   display: block;
-  width: 280px;
-  max-width: 80%;
+  width: 220px;
+  max-width: 70%;
   height: auto;
   margin: 1rem auto 0;
   opacity: .85;
 }
 @media (max-width: 600px) {
-  .page-head__melody { width: 200px; }
+  .page-head__melody { width: 160px; }
 }
 
 /* ---------- Header / Navigation ---------- */
