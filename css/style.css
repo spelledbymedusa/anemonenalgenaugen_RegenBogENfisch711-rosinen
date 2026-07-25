@@ -756,20 +756,24 @@ body.menu-open { overflow: auto; }
 }
 .footer__heather {
   position: absolute;
-  width: 140px;
-  height: 140px;
-  opacity: .18;
+  width: 160px;
+  height: auto;
+  opacity: .12;
   pointer-events: none;
   z-index: 0;
+  object-fit: contain;
 }
 .footer__heather--left {
-  bottom: 1rem;
-  left: 1rem;
+  bottom: .5rem;
+  left: .5rem;
 }
 .footer__heather--right {
-  bottom: 1rem;
-  right: 1rem;
+  bottom: .5rem;
+  right: .5rem;
   transform: scaleX(-1);
+}
+@media (max-width: 600px) {
+  .footer__heather { width: 90px; opacity: .1; }
 }
 .site-footer .wrap { position: relative; z-index: 1; }
 .site-footer::before {
