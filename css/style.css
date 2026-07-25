@@ -766,12 +766,12 @@ body.menu-open { overflow: auto; }
 .footer__heather--left {
   bottom: .5rem;
   left: .5rem;
-  left: .5rem;
   transform: scaleX(-1);
+}
 .footer__heather--right {
   bottom: .5rem;
   right: .5rem;
-  transform: scaleX(-1);
+}
 @media (max-width: 600px) {
   .footer__heather { width: 90px; opacity: .1; }
 }
@@ -785,7 +785,6 @@ body.menu-open { overflow: auto; }
 .site-footer a { color: var(--heather-blue-soft); transition: color .25s var(--ease); }
 .site-footer a:hover { color: var(--rose-soft); }
 /* (footer__top grid removed — now flat: socials row + nav row + imprint) */
-}
 .footer__brand {
   font-family: var(--font-serif);
   font-size: 1.5rem;
